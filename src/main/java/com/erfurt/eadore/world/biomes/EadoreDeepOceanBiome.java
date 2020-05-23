@@ -1,0 +1,40 @@
+package com.erfurt.eadore.world.biomes;
+
+import net.minecraft.block.Blocks;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.DefaultBiomeFeatures;
+import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
+import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
+
+public class EadoreDeepOceanBiome extends EadoreBiome
+{
+    public EadoreDeepOceanBiome()
+    {
+        super(new Biome.Builder()
+                .surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(
+                        Blocks.GRASS_BLOCK.getDefaultState(),
+                        Blocks.DIRT.getDefaultState(),
+                        Blocks.GRAVEL.getDefaultState()))
+                .category(Category.OCEAN)
+                .depth(-1.8F)
+                .scale(0.1F)
+                .temperature(0.5F));
+
+        DefaultBiomeFeatures.addOceanCarvers(this);
+        DefaultBiomeFeatures.addStructures(this);
+        DefaultBiomeFeatures.addLakes(this);
+        DefaultBiomeFeatures.addStoneVariants(this);
+        DefaultBiomeFeatures.addOres(this);
+        DefaultBiomeFeatures.addSedimentDisks(this);
+        DefaultBiomeFeatures.addScatteredOakTrees(this); // change to Mallorn tree once they are done
+        DefaultBiomeFeatures.addDefaultFlowers(this);
+        DefaultBiomeFeatures.addSparseGrass(this);
+        DefaultBiomeFeatures.addMushrooms(this);
+        DefaultBiomeFeatures.addReedsAndPumpkins(this);
+        DefaultBiomeFeatures.addSprings(this);
+        DefaultBiomeFeatures.addTallSeagrassLush(this);
+        DefaultBiomeFeatures.addSeagrass(this);
+        DefaultBiomeFeatures.addKelp(this);
+        DefaultBiomeFeatures.addFreezeTopLayer(this);
+    }
+}
