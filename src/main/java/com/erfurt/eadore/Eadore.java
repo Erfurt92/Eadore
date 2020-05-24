@@ -16,6 +16,9 @@ public class Eadore
     public static final String MOD_NAME = "Eadore";
 
     public static Eadore instance;
+
+    public static final ResourceLocation EADORE_DIMENSION_TYPE = getId("eadore_dimension");
+
     public static final Logger LOGGER = LogManager.getLogger(MOD_NAME);
 
     public Eadore()

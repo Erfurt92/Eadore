@@ -2,6 +2,7 @@ package com.erfurt.eadore;
 
 import com.erfurt.eadore.init.BiomeInit;
 import com.erfurt.eadore.init.BlockInit;
+import com.erfurt.eadore.init.DimensionInit;
 import com.erfurt.eadore.init.ItemInit;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,6 +26,7 @@ public class SideProxy
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
         BiomeInit.BIOMES.register(modEventBus);
+        DimensionInit.MOD_DIMENSIONS.register(modEventBus);
 
         modEventBus.addGenericListener(GlobalLootModifierSerializer.class, SideProxy::lootModifierRegistries);
         modEventBus.addListener(SideProxy::setup);
