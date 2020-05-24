@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_top",
+    "textures": {
+        "bottom": "eadore:block/mallorn_door_bottom",
+        "top": "eadore:block/mallorn_door_top"
+    }
+}

@@ -37,7 +37,6 @@ public class BiomeInit
 
     private static void registerBiome(Biome biome, Type... types)
     {
-        //BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(biome, 100)); // Only for added biomes to Overworld
         BiomeDictionary.addTypes(biome, types);
         BiomeManager.addSpawnBiome(biome);
     }

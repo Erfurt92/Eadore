@@ -1,9 +1,6 @@
 package com.erfurt.eadore.objects.blocks;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.OreBlock;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -15,11 +12,7 @@ public class AmethystOreBlock extends OreBlock
 {
     public AmethystOreBlock()
     {
-        super(Block.Properties.create(Material.ROCK)
-                .hardnessAndResistance(3.0F, 3.0F)
-                .sound(SoundType.STONE)
-                .harvestLevel(2)
-                .harvestTool(ToolType.PICKAXE));
+        super(Block.Properties.from(Blocks.DIAMOND_ORE));
     }
 
     @Override

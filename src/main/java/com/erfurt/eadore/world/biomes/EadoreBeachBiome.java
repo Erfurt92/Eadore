@@ -23,8 +23,8 @@ public class EadoreBeachBiome extends EadoreBiome
         DefaultBiomeFeatures.addCarvers(this);
         DefaultBiomeFeatures.addStructures(this);
         DefaultBiomeFeatures.addLakes(this);
-        DefaultBiomeFeatures.addStoneVariants(this);
-        DefaultBiomeFeatures.addOres(this);
+        EadoreBiomeFeatures.addEadoreStoneVariants(this);
+        EadoreBiomeFeatures.addEadoreOres(this);
         DefaultBiomeFeatures.addSedimentDisks(this);
         DefaultBiomeFeatures.addDefaultFlowers(this);
         DefaultBiomeFeatures.addSparseGrass(this);

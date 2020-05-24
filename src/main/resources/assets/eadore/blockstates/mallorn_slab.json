@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": {"model":"eadore:block/mallorn_slab"},
+        "type=top": {"model":"eadore:block/mallorn_slab_top"},
+        "type=double": {"model":"eadore:block/mallorn_planks"}
+    }
+}

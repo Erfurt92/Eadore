@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "eadore:block/mallorn_planks",
+        "top": "eadore:block/mallorn_planks",
+        "side": "eadore:block/mallorn_planks"
+    }
+}

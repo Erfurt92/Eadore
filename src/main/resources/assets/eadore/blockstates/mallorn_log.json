@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y": {"model":"eadore:block/mallorn_log"},
+        "axis=z": {"model":"eadore:block/mallorn_log","x":90},
+        "axis=x": {"model":"eadore:block/mallorn_log","x":90,"y":90}
+    }
+}

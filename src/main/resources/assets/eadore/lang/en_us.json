@@ -2,9 +2,35 @@
   "item.eadore.amethyst": "Amethyst",
 
   "block.eadore.amethyst_block": "Amethyst Block",
+
   "block.eadore.amethyst_ore": "Amethyst Ore",
 
+  "block.eadore.mallorn_log": "Mallorn Log",
+  "block.eadore.mallorn_wood": "Mallorn Wood",
+  "block.eadore.stripped_mallorn_log": "Stripped Mallorn Log",
+  "block.eadore.stripped_mallorn_wood": "Stripped Mallorn Wood",
+  "block.eadore.mallorn_leaves": "Mallorn Leaves",
+  "block.eadore.mallorn_sapling": "Mallorn Sapling",
+  "block.eadore.potted_mallorn_sapling": "Potted Mallorn Sapling",
+  "block.eadore.mallorn_planks": "Mallorn Planks",
+  "block.eadore.mallorn_stairs": "Mallorn Stairs",
+  "block.eadore.mallorn_slab": "Mallorn Slab",
+  "block.eadore.mallorn_fence": "Mallorn Fence",
+  "block.eadore.mallorn_fence_gate": "Mallorn Fence Gate",
+  "block.eadore.mallorn_door": "Mallorn Door",
+  "block.eadore.mallorn_trapdoor": "Mallorn Trapdoor",
+  "block.eadore.mallorn_button": "Mallorn Button",
+  "block.eadore.mallorn_pressure_plate": "Mallorn Pressure Plate",
+  "block.eadore.mallorn_sign": "Mallorn Sign",
+
   "biome.eadore.eadore_plains": "Eadore Plains",
+  "biome.eadore.eadore_forest": "Eadore Forest",
+  "biome.eadore.eadore_mountains": "Eadore Mountains",
+  "biome.eadore.eadore_forest_hills": "Eadore Forest Hills",
+  "biome.eadore.eadore_river": "Eadore River",
+  "biome.eadore.eadore_beach": "Eadore Beach",
+  "biome.eadore.eadore_ocean": "Eadore Ocean",
+  "biome.eadore.eadore_deep_ocean": "Eadore Deep Ocean",
 
   "itemGroup.eadoreGroup": "Eadore"
 }

@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "eadore:block/mallorn_log_top",
+        "side": "eadore:block/mallorn_log"
+    }
+}

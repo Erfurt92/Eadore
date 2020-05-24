@@ -3,6 +3,7 @@ package com.erfurt.eadore.objects.blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraftforge.common.ToolType;
 
 public class BaseBlock extends Block
@@ -14,5 +15,10 @@ public class BaseBlock extends Block
                 .sound(sound)
                 .harvestLevel(harvestLevel)
                 .harvestTool(tool));
+    }
+
+    public BaseBlock(Block block)
+    {
+        super(Block.Properties.from(block));
     }
 }

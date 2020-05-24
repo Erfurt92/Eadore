@@ -1,0 +1,6 @@
+{
+    "parent": "block/leaves",
+    "textures": {
+        "all": "eadore:block/mallorn_leaves"
+    }
+}

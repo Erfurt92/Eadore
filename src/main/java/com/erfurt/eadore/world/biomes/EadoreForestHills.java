@@ -24,10 +24,10 @@ public class EadoreForestHills extends EadoreBiome
         DefaultBiomeFeatures.addStructures(this);
         DefaultBiomeFeatures.addLakes(this);
         DefaultBiomeFeatures.addDoubleFlowers(this);
-        DefaultBiomeFeatures.addStoneVariants(this);
-        DefaultBiomeFeatures.addOres(this);
+        EadoreBiomeFeatures.addEadoreStoneVariants(this);
+        EadoreBiomeFeatures.addEadoreOres(this);
         DefaultBiomeFeatures.addSedimentDisks(this);
-        DefaultBiomeFeatures.addForestTrees(this); // change to Mallorn dead trees once they are done
+        EadoreBiomeFeatures.addMallornForestTrees(this);
         DefaultBiomeFeatures.addDefaultFlowers(this);
         DefaultBiomeFeatures.addGrass(this);
         DefaultBiomeFeatures.addMushrooms(this);

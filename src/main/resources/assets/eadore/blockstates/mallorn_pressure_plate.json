@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "powered=false": {"model":"eadore:block/mallorn_pressure_plate"},
+        "powered=true": {"model":"eadore:block/mallorn_pressure_plate_down"}
+    }
+}

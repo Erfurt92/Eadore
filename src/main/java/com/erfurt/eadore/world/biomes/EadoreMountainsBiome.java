@@ -23,17 +23,16 @@ public class EadoreMountainsBiome extends EadoreBiome
         DefaultBiomeFeatures.addCarvers(this);
         DefaultBiomeFeatures.addStructures(this);
         DefaultBiomeFeatures.addLakes(this);
-        DefaultBiomeFeatures.addStoneVariants(this);
-        DefaultBiomeFeatures.addOres(this);
+        EadoreBiomeFeatures.addEadoreStoneVariants(this);
+        EadoreBiomeFeatures.addEadoreOres(this);
+        EadoreBiomeFeatures.addEadoreExtraEmeraldOre(this);
         DefaultBiomeFeatures.addSedimentDisks(this);
-        DefaultBiomeFeatures.addScatteredOakAndSpruceTrees(this); // change to Mallorn trees once they are done
+        EadoreBiomeFeatures.addScatteredMallornTrees(this);
         DefaultBiomeFeatures.addDefaultFlowers(this);
         DefaultBiomeFeatures.addSparseGrass(this);
         DefaultBiomeFeatures.addMushrooms(this);
         DefaultBiomeFeatures.addReedsAndPumpkins(this);
         DefaultBiomeFeatures.addSprings(this);
-        DefaultBiomeFeatures.addExtraEmeraldOre(this);
-        DefaultBiomeFeatures.addInfestedStone(this);
         DefaultBiomeFeatures.addFreezeTopLayer(this);
     }
 }

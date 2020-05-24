@@ -12,4 +12,6 @@ public class ItemInit
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, Eadore.MOD_ID);
 
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", AmethystItem::new);
+
+    // Mallorn Boat
 }
