@@ -4,6 +4,7 @@ import com.erfurt.eadore.init.BiomeInit;
 import com.erfurt.eadore.init.BlockInit;
 import com.erfurt.eadore.init.DimensionInit;
 import com.erfurt.eadore.init.ItemInit;
+import com.erfurt.eadore.util.handlers.ModColorHandler;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
@@ -81,6 +82,8 @@ public class SideProxy
             IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
             modEventBus.addListener(Client::clientSetup);
+            modEventBus.addListener(ModColorHandler::registerItemColor);
+            modEventBus.addListener(ModColorHandler::registerBlockColor);
         }
 
         private static void clientSetup(FMLClientSetupEvent event) { }

@@ -19,4 +19,10 @@ public class EadoreBiome extends Biome
     {
         return 8454143;
     }
+
+    @Override
+    public int getFoliageColor()
+    {
+        return 8454108;
+    }
 }
