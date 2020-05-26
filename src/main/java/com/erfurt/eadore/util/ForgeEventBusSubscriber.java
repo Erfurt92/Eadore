@@ -16,15 +16,7 @@ public class ForgeEventBusSubscriber
     @SubscribeEvent
     public static void registerDimension(final RegisterDimensionsEvent event)
     {
-        if(DimensionType.byName(Eadore.EADORE_DIMENSION_TYPE) == null)
-        {
-            DimensionManager.registerDimension(Eadore.EADORE_DIMENSION_TYPE, DimensionInit.EADORE_DIMENSION.get(), null, true);
-            Eadore.LOGGER.info("DimensionType was null");
-        }
-        else
-        {
-            Eadore.LOGGER.info("DimensionType = " + Eadore.EADORE_DIMENSION_TYPE);
-        }
+        if(DimensionType.byName(Eadore.EADORE_DIMENSION_TYPE) == null) DimensionManager.registerDimension(Eadore.EADORE_DIMENSION_TYPE, DimensionInit.EADORE_DIMENSION.get(), null, true);
         Eadore.LOGGER.info("registerDimension method registered.");
     }
 }

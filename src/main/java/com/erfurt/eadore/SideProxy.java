@@ -5,19 +5,18 @@ import com.erfurt.eadore.init.BlockInit;
 import com.erfurt.eadore.init.DimensionInit;
 import com.erfurt.eadore.init.ItemInit;
 import com.erfurt.eadore.util.handlers.ModColorHandler;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.dimension.Dimension;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.event.lifecycle.*;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-@Mod.EventBusSubscriber(modid = Eadore.MOD_ID, bus = Bus.MOD)
 public class SideProxy
 {
     SideProxy()
@@ -30,8 +29,8 @@ public class SideProxy
         DimensionInit.MOD_DIMENSIONS.register(modEventBus);
 
         modEventBus.addGenericListener(GlobalLootModifierSerializer.class, SideProxy::lootModifierRegistries);
+        modEventBus.addGenericListener(Biome.class, SideProxy::onRegisterBiomes);
         modEventBus.addListener(SideProxy::setup);
-        modEventBus.addListener(SideProxy::clientRegistries);
         modEventBus.addListener(SideProxy::enqueue);
         modEventBus.addListener(SideProxy::process);
 
@@ -41,11 +40,6 @@ public class SideProxy
     private static void setup(final FMLCommonSetupEvent event)
     {
         Eadore.LOGGER.info("Setup method registered.");
-    }
-
-    private static void clientRegistries(final FMLClientSetupEvent event)
-    {
-        Eadore.LOGGER.info("clientRegistries method registered.");
     }
 
     private static void enqueue(final InterModEnqueueEvent event)
@@ -63,7 +57,6 @@ public class SideProxy
         Eadore.LOGGER.info("serverStarting method registered.");
     }
 
-    @SubscribeEvent
     public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event)
     {
         BiomeInit.registerBiomes();
@@ -81,12 +74,19 @@ public class SideProxy
         {
             IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-            modEventBus.addListener(Client::clientSetup);
+            modEventBus.addListener(Client::clientRegistries);
             modEventBus.addListener(ModColorHandler::registerItemColor);
             modEventBus.addListener(ModColorHandler::registerBlockColor);
         }
 
-        private static void clientSetup(FMLClientSetupEvent event) { }
+        private static void clientRegistries(FMLClientSetupEvent event)
+        {
+            RenderTypeLookup.setRenderLayer(BlockInit.MALLORN_SAPLING.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(BlockInit.MALLORN_DOOR.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(BlockInit.MALLORN_TRAPDOOR.get(), RenderType.getCutout());
+
+            Eadore.LOGGER.info("clientRegistries method registered.");
+        }
     }
 
     static class Server extends SideProxy

@@ -1,6 +1,17 @@
 {
   "item.eadore.amethyst": "Amethyst",
 
+  "item.eadore.amethyst_axe": "Amethyst Axe",
+  "item.eadore.amethyst_hoe": "Amethyst Hoe",
+  "item.eadore.amethyst_pickaxe": "Amethyst Pickaxe",
+  "item.eadore.amethyst_shovel": "Amethyst Shovel",
+  "item.eadore.amethyst_sword": "Amethyst Sword",
+
+  "item.eadore.amethyst_boots": "Amethyst Boots",
+  "item.eadore.amethyst_chestplate": "Amethyst Chestplate",
+  "item.eadore.amethyst_helmet": "Amethyst Helmet",
+  "item.eadore.amethyst_leggings": "Amethyst Leggings",
+
   "block.eadore.amethyst_block": "Amethyst Block",
 
   "block.eadore.amethyst_ore": "Amethyst Ore",
