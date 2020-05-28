@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "eadore:mallorn_planks"
+    }
+  ],
+  "result": {
+    "item": "eadore:mallorn_button"
+  }
+}

@@ -38,11 +38,12 @@ public class EadoreBiomeFeatures extends DefaultBiomeFeatures
 
     private static final BlockState MALLORN_LOG = BlockInit.MALLORN_LOG.get().getDefaultState();
     private static final BlockState MALLORN_LEAVES = BlockInit.MALLORN_LEAVES.get().getDefaultState();
+    private static final BlockState AIR = Blocks.AIR.getDefaultState();
     private static final Block MALLORN_SAPLING = BlockInit.MALLORN_SAPLING.get();
 
     private static BlockState EADORE_FILLER = EadoreGenSettings.DEFAULT_FILLER_BLOCK;
     private static final Predicate<BlockState> PREDICATE_EADORE_FILLER = new BlockMatcher(EADORE_FILLER.getBlock());
-    private static final OreFeatureConfig.FillerBlockType EADORE_NATURAL_STONE = OreFeatureConfig.FillerBlockType.create("eadore_natural_stone_enum", "eadore_natual_stone", PREDICATE_EADORE_FILLER);
+    private static final OreFeatureConfig.FillerBlockType EADORE_NATURAL_STONE = OreFeatureConfig.FillerBlockType.create("eadore_natural_stone_enum", "eadore_natural_stone", PREDICATE_EADORE_FILLER);
 
     public static final TreeFeatureConfig MALLORN_TREE_CONFIG = (new TreeFeatureConfig.Builder(
             new SimpleBlockStateProvider(MALLORN_LOG),
@@ -71,13 +72,6 @@ public class EadoreBiomeFeatures extends DefaultBiomeFeatures
             .decorators(ImmutableList.of(new BeehiveTreeDecorator(0.05F)))
             .setSapling((IPlantable)MALLORN_SAPLING)
             .build();
-    public static final TreeFeatureConfig field_230131_m_MALLORN = (new TreeFeatureConfig.Builder(
-            new SimpleBlockStateProvider(MALLORN_LOG),
-            new SimpleBlockStateProvider(MALLORN_LEAVES),
-            new BlobFoliagePlacer(0, 0)))
-            .decorators(ImmutableList.of(new BeehiveTreeDecorator(0.002F)))
-            .setSapling((IPlantable)MALLORN_SAPLING)
-            .build();
     public static final TreeFeatureConfig FANCY_MALLORN_TREE_WITH_MORE_BEEHIVES_CONFIG = (new TreeFeatureConfig.Builder(
             new SimpleBlockStateProvider(MALLORN_LOG),
             new SimpleBlockStateProvider(MALLORN_LEAVES),
@@ -85,7 +79,7 @@ public class EadoreBiomeFeatures extends DefaultBiomeFeatures
             .decorators(ImmutableList.of(new BeehiveTreeDecorator(0.05F)))
             .setSapling((IPlantable)MALLORN_SAPLING)
             .build();
-    public static final TreeFeatureConfig field_230132_o_MALLORN = (new TreeFeatureConfig.Builder(
+    public static final TreeFeatureConfig FOREST_MALLORN_TREE_CONFIG = (new TreeFeatureConfig.Builder(
             new SimpleBlockStateProvider(MALLORN_LOG),
             new SimpleBlockStateProvider(MALLORN_LEAVES),
             new BlobFoliagePlacer(2, 0)))
@@ -93,6 +87,31 @@ public class EadoreBiomeFeatures extends DefaultBiomeFeatures
             .heightRandA(2)
             .foliageHeight(3)
             .ignoreVines()
+            .decorators(ImmutableList.of(new BeehiveTreeDecorator(0.002F)))
+            .setSapling((IPlantable)MALLORN_SAPLING)
+            .build();
+    public static final TreeFeatureConfig FANCY_FOREST_MALLORN_TREE_CONFIG = (new TreeFeatureConfig.Builder(
+            new SimpleBlockStateProvider(MALLORN_LOG),
+            new SimpleBlockStateProvider(MALLORN_LEAVES),
+            new BlobFoliagePlacer(0, 0)))
+            .decorators(ImmutableList.of(new BeehiveTreeDecorator(0.002F)))
+            .setSapling((IPlantable)MALLORN_SAPLING)
+            .build();
+    public static final TreeFeatureConfig DEAD_MALLORN_TREE_CONFIG = (new TreeFeatureConfig.Builder(
+            new SimpleBlockStateProvider(MALLORN_LOG),
+            new SimpleBlockStateProvider(AIR),
+            new BlobFoliagePlacer(2, 0)))
+            .baseHeight(4)
+            .heightRandA(2)
+            .foliageHeight(3)
+            .ignoreVines()
+            .decorators(ImmutableList.of(new BeehiveTreeDecorator(0.002F)))
+            .setSapling((IPlantable)MALLORN_SAPLING)
+            .build();
+    public static final TreeFeatureConfig FANCY_DEAD_MALLORN_TREE_CONFIG = (new TreeFeatureConfig.Builder(
+            new SimpleBlockStateProvider(MALLORN_LOG),
+            new SimpleBlockStateProvider(AIR),
+            new BlobFoliagePlacer(0, 0)))
             .decorators(ImmutableList.of(new BeehiveTreeDecorator(0.002F)))
             .setSapling((IPlantable)MALLORN_SAPLING)
             .build();
@@ -107,7 +126,7 @@ public class EadoreBiomeFeatures extends DefaultBiomeFeatures
         biomeIn.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(EADORE_NATURAL_STONE, ANDESITE, 33)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(10, 0, 0, 80))));
     }
 
-    public static void addEadoreOres(Biome biomeIn) // Replace with Eadore variation once they are implemented
+    public static void addEadoreOres(Biome biomeIn) // Replace with Eadore variations once they are implemented
     {
         biomeIn.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(EADORE_NATURAL_STONE, EADORE_COAL_ORE, 17)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 0, 0, 128))));
         biomeIn.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(EADORE_NATURAL_STONE, EADORE_IRON_ORE, 9)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 0, 0, 64))));
@@ -131,7 +150,12 @@ public class EadoreBiomeFeatures extends DefaultBiomeFeatures
 
     public static void addMallornForestTrees(Biome biomeIn)
     {
-        biomeIn.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(Feature.FANCY_TREE.withConfiguration(field_230131_m_MALLORN).withChance(0.1F)), Feature.NORMAL_TREE.withConfiguration(field_230132_o_MALLORN))).withPlacement(Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+        biomeIn.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(Feature.FANCY_TREE.withConfiguration(FANCY_FOREST_MALLORN_TREE_CONFIG).withChance(0.1F)), Feature.NORMAL_TREE.withConfiguration(FOREST_MALLORN_TREE_CONFIG))).withPlacement(Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+    }
+
+    public static void addMallornDeadForestTrees(Biome biomeIn)
+    {
+        biomeIn.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(Feature.FANCY_TREE.withConfiguration(FANCY_DEAD_MALLORN_TREE_CONFIG).withChance(0.1F)), Feature.NORMAL_TREE.withConfiguration(DEAD_MALLORN_TREE_CONFIG))).withPlacement(Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(4, 0.1F, 1))));
     }
 
     public static void addScatteredMallornTrees(Biome biomeIn)

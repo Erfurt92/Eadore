@@ -12,7 +12,7 @@ public class EadoreForestHills extends EadoreBiome
     {
         super(new Biome.Builder()
                 .surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(
-                        Blocks.GRASS_BLOCK.getDefaultState(),
+                        Blocks.COARSE_DIRT.getDefaultState(),
                         Blocks.DIRT.getDefaultState(),
                         Blocks.GRAVEL.getDefaultState()))
                 .category(Category.FOREST)
@@ -27,7 +27,7 @@ public class EadoreForestHills extends EadoreBiome
         EadoreBiomeFeatures.addEadoreStoneVariants(this);
         EadoreBiomeFeatures.addEadoreOres(this);
         DefaultBiomeFeatures.addSedimentDisks(this);
-        EadoreBiomeFeatures.addMallornForestTrees(this);
+        EadoreBiomeFeatures.addMallornDeadForestTrees(this);
         DefaultBiomeFeatures.addDefaultFlowers(this);
         DefaultBiomeFeatures.addGrass(this);
         DefaultBiomeFeatures.addMushrooms(this);

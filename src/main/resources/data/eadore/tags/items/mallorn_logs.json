@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "eadore:mallorn_log",
+    "eadore:mallorn_wood",
+    "eadore:stripped_mallorn_log",
+    "eadore:stripped_mallorn_wood"
+  ]
+}

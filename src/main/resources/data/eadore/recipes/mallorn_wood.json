@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "eadore:mallorn_log"
+    }
+  },
+  "result": {
+    "item": "eadore:mallorn_wood",
+    "count": 3
+  }
+}

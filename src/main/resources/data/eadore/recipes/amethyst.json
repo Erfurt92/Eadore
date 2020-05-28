@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "eadore:amethyst_block"
+    }
+  ],
+  "result": {
+    "item": "eadore:amethyst",
+    "count": 9
+  }
+}
