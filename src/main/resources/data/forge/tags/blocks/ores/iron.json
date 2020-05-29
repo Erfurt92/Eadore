@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "#eadore:ores/eadore_ores"
+    "eadore:eadore_iron_ore"
   ]
 }

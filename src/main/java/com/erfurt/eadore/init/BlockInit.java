@@ -4,11 +4,9 @@ import com.erfurt.eadore.Eadore;
 import com.erfurt.eadore.objects.blocks.AmethystOreBlock;
 import com.erfurt.eadore.objects.blocks.BaseBlock;
 import com.erfurt.eadore.objects.blocks.BlockItemBase;
+import com.erfurt.eadore.objects.blocks.EadoreOreBlock;
 import com.erfurt.eadore.objects.blocks.trees.mallorn.*;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FlowerPotBlock;
-import net.minecraft.block.StandingSignBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -28,7 +26,13 @@ public class BlockInit
     /** Ore Blocks
      * All Ore Blocks
      */
-    public static final RegistryObject<Block> AMETHYST_ORE = BLOCKS.register("amethyst_ore", AmethystOreBlock::new);
+    public static final RegistryObject<Block> AMETHYST_ORE = BLOCKS.register("amethyst_ore", () -> new EadoreOreBlock(Blocks.DIAMOND_ORE));
+    public static final RegistryObject<Block> EADORE_GOLD_ORE = BLOCKS.register("eadore_gold_ore", () -> new EadoreOreBlock((Blocks.GOLD_ORE)));
+    public static final RegistryObject<Block> EADORE_IRON_ORE = BLOCKS.register("eadore_iron_ore", () -> new EadoreOreBlock(Blocks.IRON_ORE));
+    public static final RegistryObject<Block> EADORE_COAL_ORE = BLOCKS.register("eadore_coal_ore", () -> new EadoreOreBlock(Blocks.COAL_ORE));
+    public static final RegistryObject<Block> EADORE_LAPIS_ORE = BLOCKS.register("eadore_lapis_ore", () -> new EadoreOreBlock(Blocks.LAPIS_ORE));
+    public static final RegistryObject<Block> EADORE_EMERALD_ORE = BLOCKS.register("eadore_emerald_ore", () -> new EadoreOreBlock(Blocks.EMERALD_ORE));
+    public static final RegistryObject<Block> EADORE_REDSTONE_ORE = BLOCKS.register("eadore_redstone_ore", () -> new RedstoneOreBlock(Block.Properties.from(Blocks.REDSTONE_ORE)));
 
     /** Wood Stuff
      * All blocks related to trees and planks
@@ -49,13 +53,19 @@ public class BlockInit
     public static final RegistryObject<Block> MALLORN_TRAPDOOR = BLOCKS.register("mallorn_trapdoor", MallornTrapDoorBlock::new);
     public static final RegistryObject<Block> MALLORN_BUTTON = BLOCKS.register("mallorn_button", MallornButtonBlock::new);
     public static final RegistryObject<Block> MALLORN_PRESSURE_PLATE = BLOCKS.register("mallorn_pressure_plate", MallornPressurePlateBlock::new);
-    public static final RegistryObject<Block> MALLORN_SIGN = BLOCKS.register("mallorn_sign", () -> new StandingSignBlock(Block.Properties.from(Blocks.OAK_SIGN), MallornWoodType.MALLORN)); // Not working for now
+    public static final RegistryObject<Block> MALLORN_SIGN = BLOCKS.register("mallorn_sign", MallornSignBlock::new); // Not working for now
 
 
     // Block Items
     public static final RegistryObject<Item> AMETHYST_BLOCK_ITEM = ItemInit.ITEMS.register("amethyst_block", () -> new BlockItemBase(AMETHYST_BLOCK.get()));
 
     public static final RegistryObject<Item> AMETHYST_ORE_ITEM = ItemInit.ITEMS.register("amethyst_ore", () -> new BlockItemBase(AMETHYST_ORE.get()));
+    public static final RegistryObject<Item> EADORE_GOLD_ORE_ITEM = ItemInit.ITEMS.register("eadore_gold_ore", () -> new BlockItemBase(EADORE_GOLD_ORE.get()));
+    public static final RegistryObject<Item> EADORE_IRON_ORE_ITEM = ItemInit.ITEMS.register("eadore_iron_ore", () -> new BlockItemBase(EADORE_IRON_ORE.get()));
+    public static final RegistryObject<Item> EADORE_COAL_ORE_ITEM = ItemInit.ITEMS.register("eadore_coal_ore", () -> new BlockItemBase(EADORE_COAL_ORE.get()));
+    public static final RegistryObject<Item> EADORE_LAPIS_ORE_ITEM = ItemInit.ITEMS.register("eadore_lapis_ore", () -> new BlockItemBase(EADORE_LAPIS_ORE.get()));
+    public static final RegistryObject<Item> EADORE_EMERALD_ORE_ITEM = ItemInit.ITEMS.register("eadore_emerald_ore", () -> new BlockItemBase(EADORE_EMERALD_ORE.get()));
+    public static final RegistryObject<Item> EADORE_REDSTONE_ORE_ITEM = ItemInit.ITEMS.register("eadore_redstone_ore", () -> new BlockItemBase(EADORE_REDSTONE_ORE.get()));
 
     public static final RegistryObject<Item> MALLORN_LOG_ITEM = ItemInit.ITEMS.register("mallorn_log", () -> new BlockItemBase(MALLORN_LOG.get()));
     public static final RegistryObject<Item> MALLORN_WOOD_ITEM = ItemInit.ITEMS.register("mallorn_wood", () -> new BlockItemBase(MALLORN_WOOD.get()));

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "eadore:amethyst_ore",
+    "eadore:eadore_gold_ore",
+    "eadore:eadore_iron_ore",
+    "eadore:eadore_coal_ore",
+    "eadore:eadore_lapis_ore",
+    "eadore:eadore_emerald_ore",
+    "eadore:eadore_redstone_ore"
+  ]
+}

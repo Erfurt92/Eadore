@@ -28,13 +28,13 @@ public class EadoreBiomeFeatures extends DefaultBiomeFeatures
     private static final BlockState DIORITE = Blocks.DIORITE.getDefaultState();
     private static final BlockState ANDESITE = Blocks.ANDESITE.getDefaultState();
 
-    private static final BlockState EADORE_COAL_ORE = Blocks.COAL_ORE.getDefaultState();
-    private static final BlockState EADORE_IRON_ORE = Blocks.IRON_ORE.getDefaultState();
-    private static final BlockState EADORE_GOLD_ORE = Blocks.GOLD_ORE.getDefaultState();
-    private static final BlockState EADORE_REDSTONE_ORE = Blocks.REDSTONE_ORE.getDefaultState();
+    private static final BlockState EADORE_COAL_ORE = BlockInit.EADORE_COAL_ORE.get().getDefaultState();
+    private static final BlockState EADORE_IRON_ORE = BlockInit.EADORE_IRON_ORE.get().getDefaultState();
+    private static final BlockState EADORE_GOLD_ORE = BlockInit.EADORE_GOLD_ORE.get().getDefaultState();
+    private static final BlockState EADORE_REDSTONE_ORE = BlockInit.EADORE_REDSTONE_ORE.get().getDefaultState();
     private static final BlockState AMETHYST_ORE = BlockInit.AMETHYST_ORE.get().getDefaultState();
-    private static final BlockState EADORE_LAPIS_ORE = Blocks.LAPIS_ORE.getDefaultState();
-    private static final BlockState EADORE_EMERALD_ORE = Blocks.EMERALD_ORE.getDefaultState();
+    private static final BlockState EADORE_LAPIS_ORE = BlockInit.EADORE_LAPIS_ORE.get().getDefaultState();
+    private static final BlockState EADORE_EMERALD_ORE = BlockInit.EADORE_EMERALD_ORE.get().getDefaultState();
 
     private static final BlockState MALLORN_LOG = BlockInit.MALLORN_LOG.get().getDefaultState();
     private static final BlockState MALLORN_LEAVES = BlockInit.MALLORN_LEAVES.get().getDefaultState();

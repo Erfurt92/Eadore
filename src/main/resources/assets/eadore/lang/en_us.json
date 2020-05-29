@@ -12,9 +12,15 @@
   "item.eadore.amethyst_helmet": "Amethyst Helmet",
   "item.eadore.amethyst_leggings": "Amethyst Leggings",
 
-  "block.eadore.amethyst_block": "Amethyst Block",
+  "block.eadore.amethyst_block": "Block of Amethyst",
 
   "block.eadore.amethyst_ore": "Amethyst Ore",
+  "block.eadore.eadore_gold_ore": "Gold Ore",
+  "block.eadore.eadore_iron_ore": "Iron Ore",
+  "block.eadore.eadore_coal_ore": "Coal Ore",
+  "block.eadore.eadore_lapis_ore": "Lapis Lazuli Ore",
+  "block.eadore.eadore_emerald_ore": "Emerald Ore",
+  "block.eadore.eadore_redstone_ore": "Redstone Ore",
 
   "block.eadore.mallorn_log": "Mallorn Log",
   "block.eadore.mallorn_wood": "Mallorn Wood",
