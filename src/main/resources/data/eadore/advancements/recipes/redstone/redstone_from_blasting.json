@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "eadore:redstone_from_blasting"
+    ]
+  },
+  "criteria": {
+    "has_redstone_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "eadore:eadore_redstone_ore"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "eadore:redstone_from_blasting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_redstone_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

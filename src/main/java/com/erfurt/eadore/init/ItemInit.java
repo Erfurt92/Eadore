@@ -18,10 +18,14 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
+@SuppressWarnings("unused")
 public class ItemInit
 {
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, Eadore.MOD_ID);
 
+    /** Gems
+     * All gems
+     */
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst", AmethystItem::new);
 
     /** Amethyst Tools & Armor

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "eadore:mallorn_sign"
+    ]
+  },
+  "criteria": {
+    "has_mallorn_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "eadore:mallorn_planks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "eadore:mallorn_sign"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_mallorn_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

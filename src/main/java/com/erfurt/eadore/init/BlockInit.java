@@ -17,7 +17,6 @@ public class BlockInit
 {
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Eadore.MOD_ID);
 
-    // Blocks
     /** Generic Blocks
      * All generic blocks, stair, slabs and walls
      */
@@ -56,7 +55,9 @@ public class BlockInit
     public static final RegistryObject<Block> MALLORN_SIGN = BLOCKS.register("mallorn_sign", MallornSignBlock::new); // Not working for now
 
 
-    // Block Items
+    /** Block Items
+     * All Blocks with Item
+     */
     public static final RegistryObject<Item> AMETHYST_BLOCK_ITEM = ItemInit.ITEMS.register("amethyst_block", () -> new BlockItemBase(AMETHYST_BLOCK.get()));
 
     public static final RegistryObject<Item> AMETHYST_ORE_ITEM = ItemInit.ITEMS.register("amethyst_ore", () -> new BlockItemBase(AMETHYST_ORE.get()));
